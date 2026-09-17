@@ -1,0 +1,22 @@
+name: Cartelier
+author: organizer
+category: Web
+description: |
+  Cartelier's support staff will inspect broken storefront pages for you.
+  Their session cookie is HttpOnly, but is that enough to keep the private
+  courier note safe?
+value: 350
+type: dynamic
+extra:
+  initial: 350
+  decay: 25
+  minimum: 100
+connection_info: http://localhost:3000
+flags:
+  - CTF{XSS_can_read_pages}
+tags:
+  - xss
+  - web
+files: []
+state: visible
+version: "0.1"
