@@ -75,7 +75,7 @@ app.get('/admin', (req, res) => {
 });
 
 app.get('/support', (req, res) => {
-  res.send(layout('Support', `<section class="support"><div><p class="eyebrow">CUSTOMER CARE</p><h1>How can we help?</h1><p>Our staff review reported storefront problems in an authenticated browser.</p><ol><li>Create a private reply inbox.</li><li>Report the storefront path that is misbehaving.</li><li>Review replies sent to your inbox.</li></ol></div><div class="panel"><h2>Report a page</h2><form id="report-form"><label>Path to review<input name="path" placeholder="/login?error=..." maxlength="4096" required></label><button>Ask staff to review</button></form><p id="report-result" class="fine"></p><hr><h2>Private reply inbox</h2><button id="create-inbox" class="secondary">Create inbox</button><p id="inbox-result" class="fine"></p></div></section><script src="/static/support.js"></script>`));
+  res.send(layout('Support', `<section class="support"><div><p class="eyebrow">CUSTOMER CARE</p><h1>How can we help?</h1><p>Our staff review reported storefront problems in an authenticated browser.</p><ol><li>Create a private reply inbox.</li><li>Report the storefront path that is misbehaving.</li><li>Review replies sent to your inbox.</li></ol></div><div class="panel"><h2>Report a page</h2><form id="report-form"><label>Path to review<input name="path" placeholder="/path" maxlength="4096" required></label><button>Ask staff to review</button></form><p id="report-result" class="fine"></p><hr><h2>Private reply inbox</h2><button id="create-inbox" class="secondary">Create inbox</button><p id="inbox-result" class="fine"></p></div></section><script src="/static/support.js"></script>`));
 });
 
 app.post('/api/inboxes', (req, res) => {
